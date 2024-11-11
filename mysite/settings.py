@@ -55,7 +55,10 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            # Adicione aqui o caminho para os templates
+            BASE_DIR / 'blog/templates',  # Isso garante que o Django procure em blog/templates
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -67,6 +70,9 @@ TEMPLATES = [
         },
     },
 ]
+
+
+# No modifications can be made as there is no selected code.
 
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
